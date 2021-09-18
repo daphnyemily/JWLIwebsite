@@ -1,0 +1,867 @@
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  /* text-align: center; */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+     clear: both;
+}
+
+.alignright {
+     float: right;
+     padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+     float: left;
+     padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+/*1px  = 0.0625rem
+10px = 0.625rem
+12px = 0.75rem
+14px = 0.875rem
+16px = 1rem (base)
+18px = 1.125rem
+20px = 1.25rem
+24px = 1.5rem
+30px = 1.875rem
+32px = 2rem*/
+
+/*.bodyCont {
+     position: absolute;
+     left: 0;
+     right: 0;
+     top: 0;
+     max-width: 1350;
+}*/
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     color: #000;
+     font-size: 12px;
+     line-height: 1.4;
+     font-family: Helvetica, Arial, sans-serif;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header{
+  height: 1.563em;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  margin: 0.625em 0 0.625em 0;
+}
+.hamburger{
+  display: none;
+}
+a{
+  text-decoration: none;
+  color: black;
+  font-size: 132%;
+  margin: 0 4% 0 4%;
+}
+header button{
+  color: white;
+  width: 6%;
+  height: 1.750em;
+  border: none;
+  background: rgb(51,57,66);
+}
+.JWLIwithSignUpBox{
+  height: 30.5em;
+  width: 100%;
+  background: rgb(241, 243, 245);
+}
+.JWLIwithSignUpBox section{
+  float: left;
+  width: 520px;
+}
+.JWLImoto{
+  margin: 1.875em 7.25em 2em 10.5em;
+}
+.logo{
+  height: 85px;
+  margin: 10px 25px 18px 125px;
+}
+.JWLImoto h2{
+  font-size: 25px;
+  font-weight: 400;
+  color: rgb(91, 92, 97);
+  margin: 0px 0 0 35px;
+}
+.JWLImoto h3{
+  font-size: 16px;
+  font-weight: 400;
+  margin: 4px 42px 25px 42px;
+  color: rgb(91, 92, 97);
+}
+.JWLImoto p{
+  font-size: 13px;
+  font-weight: 400;
+  color: rgb(91, 92, 97);
+  margin: 15px 20px 6px 40px;
+}
+.JWLImoto input{
+  width: 320px;
+  height: 35px;
+  color: rgb(184, 197, 207);
+  border: 1px solid rgb(184, 197, 207);
+  border-radius: 5px;
+  margin: 0 13px 0 41px;
+  padding: 0 0 0 15px;
+}
+.JWLImoto button{
+  width: 119px;
+  height: 35px;
+  color: white;
+  font-size: 15px;
+  background: rgb(184, 197, 207);
+  border: 1px solid rgb(159, 169, 177);
+  border-radius: 5px;
+}
+.greyWomanPhoto{
+  height: 320px;
+  margin: 40px 0 0 100px;
+  clear: both;
+}
+.JWLIempowers{
+  height: 310px;
+  width: 100%;
+  background: rgb(255, 255, 255);
+}
+.JWLIempowers h1{
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  margin: 2.813em 11.625em 1em 12.875em;
+}
+.pinkBorder{
+  border-bottom: 4px solid rgb(252, 222, 240);
+  color: transparent;
+  margin: 0 0 0px -10px;
+  padding: 0 108px;
+}
+.developParagraph{
+  border-width: 25px;
+  width: 355px;
+  font-size: 15px;
+  float: left;
+  margin: 0 25px 0 320px;
+}
+.fosterParagraph{
+  width: 360px;
+  font-size: 15px;
+  float: left;
+  margin: 0 10px 20px 20px;
+}
+.developParagraph span,.fosterParagraph span{
+  font-weight: bold;
+}
+.JWLIempowers h4{
+ font-size: 14px;
+ color: rgb(184, 197, 207);
+ font-style: italic;
+ text-align: center;
+ font-weight: 400;
+ width: 765px;
+ clear: both;
+ margin: 0px 0 1.563em 22.063em;
+}
+.ourHistory{
+  height: 600px;
+  width: 100%;
+  background: rgb(241, 243, 245);
+}
+.ourHistory h1{
+  font-size: 23px;
+  margin: 0 25px 3px 145px;
+  padding: 25px 0 0 0;
+}
+.ourHistoryBlurb{
+  color: rgb(91, 92, 97);
+  font-size: 15px;
+  width: 39%;
+  margin: 0 55px 25px 145px;
+  float: left;
+}
+.ourHistoryImg{
+  margin: 25px 25px 25px 25px;
+  float: left;
+}
+.ourHistory section img{
+  height: 200px;
+  width: 300px;
+  margin: 0px 40px 8px 115px;
+}
+.ourHistory span{
+  color: rgb(184, 197, 207);
+  font-style: italic;
+  font-size: 14px;
+  margin: 0 0 0 225px;
+}
+.ourHistory p{
+  margin: 0 0px 6px 0px;
+}
+.whoWeAre{
+  height: 670px;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  clear: both;
+}
+.whoWeAre h1{
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  clear: both;
+}
+.founderBio{
+  border: 1px solid lightgray;
+  height: 28em;
+  width: 61%;
+  margin: 25px 265px;
+}
+.founderBio img{
+  height: 250px;
+  margin: 25px 25px 25px 25px;
+  float: left;
+}
+.founderBio h4{
+  font-size: 13px;
+  margin: 20px 153px 0px 0px;
+}
+.founderBio p{
+  font-size: 15px;
+  float: left;
+  width: 64%;
+}
+.FFFoundation{
+  width: 435px;
+  margin: 0px 16px 25px 265px;
+  float: left;
+}
+.FFFoundation h3{
+  font-size: 18px;
+  font-weight: 300;
+  color: rgb(143, 156, 163);
+  margin: 25px 0px 3px 0px;
+}
+.FFFoundation p{
+  font-size: 14px;
+  line-height: 24px;
+}
+.Simmons{
+  width: 488px;
+  float: left;
+  margin: 15px 25px 25px -8px;
+}
+.Simmons img{
+  height: 40px;
+  margin: 0 25px 0 25px;
+}
+.Simmons p{
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0px 25px 25px 25px;
+}
+footer{
+  height: 150px;
+  width: 100%;
+  clear: both;
+}
+.signUpNewsLetter{
+  background: rgb(184, 197, 208);
+  height: 47%;
+}
+.signUpNewsLetter h3{
+  font-size: 17px;
+  color: white;
+  font-weight: 300;
+  margin: 25px 100px 25px 315px;
+  float: left;
+}
+.signUpNewsLetter input{
+  width: 320px;
+  height: 40px;
+  color: rgb(184, 197, 208);
+  border: 1px solid rgb(184, 197, 207);
+  border-radius: 5px;
+  margin: 0 13px 0 41px;
+  padding: 0 0 0 15px;
+}
+.signUpNewsLetter button{
+  width: 119px;
+  height: 40px;
+  color: white;
+  font-size: 15px;
+  background: rgb(143, 156, 163);
+  border: 1px solid rgb(143, 156, 163);
+  border-radius: 5px;
+  margin: 16px 0 12px 0px;
+}
+.footerLinks{
+  background: rgb(143, 156, 163);
+  height: 150%;
+}
+.footerCopyright{
+  border-bottom: 1px solid white;
+  width: 62%;
+  float: left;
+  margin: 0 0 25px 325px;
+}
+.footerCopyright p{
+  color: white;
+  font-size: 12px;
+  margin: 25px 0 18px 0px;
+  float: left;
+}
+.footerCopyright nav{
+  margin: 25px 0 0 0;
+}
+.footerCopyright a{
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 24px 5px 0 0;
+}
+nav .YoutubeLink{
+  margin: 0 5px 0 241px;
+}
+.footerNav{
+  clear: both;
+}
+.footerNav ul{
+  float: left;
+  list-style: none;
+}
+.footerNav a{
+  color: white;
+  font-weight: 300;
+  font-size: 12px;
+}
+.boldFooterLink a{
+  font-weight: bold;
+}
+.footerNavHome ul{
+  margin: 0 0 25px 285px;
+  /* height: 2em; */
+  width: 10em;
+}
+.footerNavProgram ul{
+  margin: 0 0 25px 0px;
+  width: 15em;
+}
+.footerNavJWLIA ul{
+  margin: 0 100px 25px 0px;
+  /* padding: 0 0px 0 1px; */
+  width: 13em;
+}
+.horizontalFooterLinks a{
+  font-weight: bold;
+  margin: 0 50px 25px -7px;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+@media screen and (max-width: 640px) {
+    .ourHistory{
+      display: none;
+    }
+    header{
+      height: 50px;
+    }
+    .hamburger{
+      display: inline-flex;
+      float: left;
+      margin-left: 2%;
+      background: white;
+      height: 35px;
+    }
+    .JWLIwithSignUpBox{
+      width: 132%;
+    }
+    .JWLImoto{
+      margin: 0;
+    }
+    .greyWomanPhoto{
+      display: none;
+    }
+    .JWLIempowers h1{
+      margin: 1.5em 0.5em 1.1em 0.5em;
+    }
+    .developParagraph, .fosterParagraph{
+      margin: 0 0px 0 80px ;
+    }
+    .whoWeAre h1{
+      display: inline-block;
+      margin: 30px 25px 25px 180px;
+    }
+    .founderBio{
+      display: none;
+    }
+    .FFFoundation h3{
+      margin: 25px 0px 3px 135px;
+    }
+    .FFFoundation p{
+      margin: 25px 5px 25px 93px;
+    }
+    header a{
+      display: none;
+    }
+
+    .JWLIempowers h4{
+      display: none;
+    }
+    .FFFoundation{
+      margin: 0px 16px 25px 0px;
+    }
+    .Simmons{
+      margin: 15px 25px 25px 20px;
+    }
+    .Simmons p{
+      margin: 0px 2em 0 2em;
+    }
+    footer{
+      width: 138%;
+    }
+    .signUpNewsLetter h3{
+      font-size: 1.063em;
+      margin: 2.5em 3em 1.5em 1.2em;
+    }
+    .footerCopyright{
+      display: none;
+    }
+    .signUpNewsLetter input{
+      width: 160px;
+      margin: 18px 0px 0px 0px;
+    }
+    .signUpNewsLetter button{
+      width: 60px;
+      height: 25px;
+    }
+    .footerLinks{
+      display: none;
+    }
+
+}
+@media (min-width: 641px) and (max-width: 840px) {
+  .ourHistory{
+    display: none;
+  }
+  header{
+    height: 50px;
+  }
+  .hamburger{
+    display: inline-flex;
+    float: left;
+    margin-left: 2%;
+    background: white;
+    height: 35px;
+  }
+  .JWLIwithSignUpBox{
+    width: 100%;
+  }
+  .JWLImoto{
+    margin: 3em 7em 0em 10em;
+  }
+  .greyWomanPhoto{
+    display: none;
+  }
+  .JWLIempowers h1{
+    margin: 1.55em 0em 1.125em 0em;
+  }
+  .developParagraph, .fosterParagraph{
+    margin: 0 0 0 10em;
+  }
+  .whoWeAre h1{
+    display: inline-block;
+    margin: 1em 1em 1em 11em;
+  }
+  .founderBio{
+    display: none;
+  }
+  .FFFoundation h3{
+    margin: 2em 0em 0em 11em;
+  }
+  .FFFoundation p{
+    margin: 2em -5em 2em 9em;
+  }
+  header a{
+    display: none;
+  }
+
+  .JWLIempowers h4{
+    display: none;
+  }
+  .FFFoundation{
+    margin: 0px 16px 25px 0px;
+  }
+  .Simmons{
+    margin: 1em 2em 2em 7em;
+  }
+  footer{
+    width: 100%;
+  }
+  .signUpNewsLetter h3{
+    font-size: 17px;
+    margin: 25px 50px 25px 20px;
+  }
+  .footerCopyright{
+    display: none;
+  }
+  .signUpNewsLetter input{
+    width: 160px;
+    margin: 18px 0px 0px 0px;
+  }
+  .signUpNewsLetter button{
+    width: 60px;
+    height: 25px;
+  }
+  .footerLinks{
+    display: none;
+  }
+
+}
+@media (min-width: 841px) and (max-width: 1253px) {
+  header{
+    height: 1.563em;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    margin: 0.625em 0 0.625em 0;
+  }
+  .hamburger{
+    display: none;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+    font-size: 132%;
+    margin: 0 4% 0 2%;
+  }
+  header button{
+    color: white;
+    width: 6%;
+    height: 1.750em;
+    border: none;
+    background: rgb(51,57,66);
+  }
+  .JWLIwithSignUpBox{
+    height: 31.5em;
+    width: 100%;
+    background: rgb(241, 243, 245);
+  }
+  .JWLIwithSignUpBox section{
+    float: left;
+    width: 50%;
+  }
+  .JWLImoto{
+    margin: 0.875em 0.25em 2em 20em;
+  }
+  .logo{
+    height: 101px;
+    margin: .6em 2em 1.5em 3em;
+  }
+  .JWLImoto h2{
+    font-size: 25px;
+    font-weight: 400;
+    color: rgb(91, 92, 97);
+    margin: 0px 0 0 35px;
+  }
+  .JWLImoto h3{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 4px 42px 25px 42px;
+    color: rgb(91, 92, 97);
+  }
+  .JWLImoto p{
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(91, 92, 97);
+    margin: 15px 20px 6px 40px;
+  }
+  .JWLImoto input{
+    width: 18em;
+    height: 35px;
+    color: rgb(184, 197, 207);
+    border: 1px solid rgb(184, 197, 207);
+    border-radius: 5px;
+    margin: 0 13px 0 23px;
+    padding: 0 0 0 15px;
+  }
+  .JWLImoto button{
+    width: 8em;
+    height: 35px;
+    color: white;
+    font-size: 15px;
+    background: rgb(184, 197, 207);
+    border: 1px solid rgb(159, 169, 177);
+    border-radius: 5px;
+  }
+  .greyWomanPhoto{
+    /* width: 50%; */
+    /* height: 20em; */
+    /* margin: 2em 0px 0px 7em; */
+    /* clear: both; */
+    display: none;
+  }
+  .JWLIempowers{
+    height: 310px;
+    width: 100%;
+    text-align: center;
+    background: rgb(255, 255, 255);
+  }
+  .JWLIempowers h1{
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    /* margin: 1em 8em 1em 6em; */
+  }
+  .pinkBorder{
+    border-bottom: 4px solid rgb(252, 222, 240);
+    color: transparent;
+    margin: 0 0 0px -10px;
+    padding: 0 108px;
+  }
+  .developParagraph{
+    border-width: 25px;
+    width: 355px;
+    font-size: 15px;
+    float: left;
+    text-align: center;
+    margin: 0 1.56em 0 15em;
+  }
+  .fosterParagraph{
+    width: 360px;
+    font-size: 15px;
+    float: left;
+    margin: 0 10px 20px 20px;
+  }
+  .developParagraph span,.fosterParagraph span{
+    font-weight: bold;
+  }
+  .JWLIempowers h4{
+   font-size: 14px;
+   color: rgb(184, 197, 207);
+   font-style: italic;
+   text-align: center;
+   font-weight: 400;
+   /* width: 765px; */
+   clear: both;
+   margin: 0 0 0 191px;
+  }
+  .ourHistory{
+    height: 39.5em;
+    width: 100%;
+    text-align: center;
+    background: rgb(241, 243, 245);
+  }
+  .ourHistory h1{
+    font-size: 23px;
+    margin: 0 25px 3px 0;
+    /* text-align: center; */
+    /* text-align: center; */
+    padding: 25px 0 15px 0px;
+  }
+  .ourHistoryBlurb{
+    color: rgb(91, 92, 97);
+    font-size: 15px;
+    width: 90%;
+    /* text-align: center; */
+    margin: 0 55px 25px 60px;
+    float: left;
+  }
+  .ourHistoryImg{
+    margin: 25px 25px 25px 25px;
+    float: left;
+  }
+  .ourHistory section img{
+    height: 200px;
+    width: 300px;
+    margin: 0px 40px 8px 115px;
+    display: none;
+  }
+  .ourHistory span{
+    color: rgb(184, 197, 207);
+    font-style: italic;
+    font-size: 14px;
+    margin: 0 0 0 225px;
+    display: none;
+  }
+  .ourHistory p{
+    margin: 0 0px 10px 0px;
+  }
+  .whoWeAre{
+    height: 670px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    clear: both;
+  }
+  .whoWeAre h1{
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 2em;
+    clear: both;
+  }
+  .founderBio{
+    border: 1px solid lightgray;
+    height: 32em;
+    width: 82%;
+    margin: 2em 20em 2em 5em;
+  }
+  .founderBio img{
+    height: 250px;
+    margin: 25px 25px 25px 25px;
+    float: left;
+  }
+  .founderBio h4{
+    font-size: 13px;
+    margin: 20px 153px 0px 0px;
+  }
+  .founderBio p{
+    font-size: 15px;
+    float: left;
+    width: 63%;
+  }
+  .FFFoundation{
+    width: 42%;
+    margin: 0px 1.5em 2em 2em;
+    float: left;
+  }
+  .FFFoundation h3{
+    font-size: 18px;
+    font-weight: 300;
+    color: rgb(143, 156, 163);
+    margin: 25px 0px 3px 0px;
+  }
+  .FFFoundation p{
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .Simmons{
+    width: 50%;
+    float: left;
+    margin: 15px 25px 25px -8px;
+  }
+  .Simmons img{
+    height: 40px;
+    margin: 0 25px 0 25px;
+  }
+  .Simmons p{
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0px 69px 25px 9px;
+  }
+  footer{
+    height: 150px;
+    width: 100%;
+    clear: both;
+  }
+  .signUpNewsLetter{
+    background: rgb(184, 197, 208);
+    height: 47%;
+  }
+  .signUpNewsLetter h3{
+    font-size: 17px;
+    color: white;
+    font-weight: 300;
+    margin: 1.5em 3em 1em 2em;
+    float: left;
+  }
+  .signUpNewsLetter input{
+    width: 320px;
+    height: 40px;
+    color: rgb(184, 197, 208);
+    border: 1px solid rgb(184, 197, 207);
+    border-radius: 5px;
+    margin: 0 13px 0 41px;
+    padding: 0 0 0 15px;
+  }
+  .signUpNewsLetter button{
+    width: 119px;
+    height: 40px;
+    color: white;
+    font-size: 15px;
+    background: rgb(143, 156, 163);
+    border: 1px solid rgb(143, 156, 163);
+    border-radius: 5px;
+    margin: 16px 0 12px 0px;
+  }
+  .footerLinks{
+    display: none;
+  }
+  .footerCopyright{
+    border-bottom: 1px solid white;
+    width: 58%;
+    float: left;
+    margin: 0 0 25px 325px;
+  }
+  .footerCopyright p{
+    color: white;
+    font-size: 12px;
+    margin: 25px 0 18px 0px;
+    float: left;
+  }
+  .footerCopyright nav{
+    margin: 25px 0 0 0;
+  }
+  .footerCopyright a{
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 25px 8px 25px 0;
+  }
+  nav .YoutubeLink{
+    margin: 0 7px 0 300px;
+  }
+  .footerNav{
+    clear: both;
+  }
+  .footerNav ul{
+    float: left;
+    list-style: none;
+  }
+  .footerNav a{
+    color: white;
+    font-weight: 300;
+    font-size: 12px;
+  }
+  .boldFooterLink a{
+    font-weight: bold;
+  }
+  .footerNavHome ul{
+    margin: 0 0 25px 228px;
+  }
+  .footerNavProgram ul{
+    margin: 0 0 25px -104px;
+  }
+  .footerNavJWLIA ul{
+    margin: 0 25px 25px -105px;
+  }
+  .horizontalFooterLinks a{
+    font-weight: bold;
+    margin: 0 50px 25px -7px;
+  }
+}
