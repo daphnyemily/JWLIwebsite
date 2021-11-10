@@ -1,4 +1,4 @@
-# JWLIwebsite 
+# JWLIwebsite - HTML, CSS, Responsive Website.
 
 <a href="https://jwli-daphnyemily.netlify.app/">Click for demo</a>
 
